@@ -1,5 +1,6 @@
 # test_plotly_template.py
 import plotly.io as pio
+import ssb_plotly_template.ssb_plotly_template  # noqa: F401
 
 
 def test_ssb_plotly_template() -> None:
