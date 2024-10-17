@@ -1,0 +1,22 @@
+{
+  "_copy_without_render": [
+    "*.rst_t"
+  ],
+  "_jinja2_env_vars": {
+    "lstrip_blocks": true,
+    "trim_blocks": true
+  },
+  "_template": "https://github.com/statisticsnorway/ssb-pypitemplate.git",
+  "author": "Elise Alstad",
+  "code_quality_level": "Low",
+  "copyright_owner": "Statistics Norway",
+  "copyright_year": "2024",
+  "development_status": "Development Status :: 3 - Alpha",
+  "email": "elise.alstad@ssb.no",
+  "friendly_name": "Plotly template SSB design",
+  "github_organization": "statisticsnorway",
+  "license": "MIT",
+  "package_name": "ssb_plotly_template",
+  "project_name": "ssb-plotly-template",
+  "version": "0.0.0"
+}

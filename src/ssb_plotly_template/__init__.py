@@ -1,0 +1,1 @@
+"""Plotly template SSB design."""
