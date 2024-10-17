@@ -1,7 +1,7 @@
 import plotly.graph_objects as go
 import plotly.io as pio
 
-pio.templates["ssb_plotly_design_template"] = go.layout.Template(
+pio.templates["ssb_plotly_template"] = go.layout.Template(
     layout={
         "title": {
             "font": {"family": "Roboto, Sans-serif", "size": 20, "color": "#162327"},
@@ -71,4 +71,4 @@ pio.templates["ssb_plotly_design_template"] = go.layout.Template(
     },
 )
 
-pio.templates.default = "ssb_plotly_design_template"
+pio.templates.default = "ssb_plotly_template"
