@@ -62,7 +62,6 @@ warn_unreachable = true
 pretty = true
 show_column_numbers = true
 show_error_context = true
-ignore_missing_imports = true
 
 [tool.ruff]
 force-exclude = true  # Apply excludes to pre-commit
@@ -126,3 +125,10 @@ classmethod-decorators = ["classmethod", "validator", "root_validator", "pydanti
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[[tool.mypy.overrides]]
+module = [
+    "plotly.*",
+]
+ignore_missing_imports = true
