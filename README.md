@@ -25,13 +25,21 @@
 [black]: https://github.com/psf/black
 [poetry]: https://python-poetry.org/
 
+A Python library that provides a custom Plotly template for visualising data with consistent styling and layout. The font and colours follow the SSB Design-system https://design.ssb.no
+
+This is not an official template. The template is still under development.
+
 ## Features
 
-- TODO
+- Custom Plotly layout that can be easily applied to any figure.
+- Includes predefined color schemes, fonts, and other styling options.
+- Compatible with Plotly go chart types, including bar, line, scatter, and Plotly tables.
+
 
 ## Requirements
 
-- TODO
+- Python 3.x
+- Plotly 5.x or higher
 
 ## Installation
 
@@ -43,7 +51,75 @@ pip install ssb-plotly-template
 
 ## Usage
 
-Please see the [Reference Guide] for details.
+After installing the library, you can easily apply the custom Plotly template to your figures. Here’s how to use it:
+
+1. Import both Plotly and ssb-plotly-template
+2. Create a Plotly figure.  with the ssb-plotly-template template.
+
+### Example
+Import libraries and create data:
+```
+import ssb_plotly_template
+import plotly.graph_objects as go
+import pandas as pd
+
+
+data = {
+    "Category": ["A", "B", "C", "D"],
+    "Values": [10, 23, 15, 7],
+    "Values2": [13, 22, 25, 17],
+    "Values3": [23, 23, 28, 27],
+    "Dates": ["2024-10-01", "2024-10-05", "2024-10-10", "2024-10-15"],
+}
+
+df = pd.DataFrame(data)
+df["Dates"] = pd.to_datetime(df["Dates"])
+```
+
+Create Plotly Go bar chart with ssb-plotly-template.
+```
+bar_chart = go.Figure(
+    data=[go.Bar(x=df["Category"], y=df["Values"])],
+    layout_title_text="Bar Chart",
+    layout_template="ssb_plotly_template",
+)
+
+bar_chart.show()
+```
+
+Create timeline (scatter plot) with multiple lines with ssb-plotly-template.
+
+```
+timeline_chart = go.Figure(
+    data=[
+        go.Scatter(x=df["Dates"], y=df["Values"], mode="lines+markers", name="Line 1"),
+        go.Scatter(x=df["Dates"], y=df["Values2"], mode="lines+markers", name="Line 2"),
+        go.Scatter(x=df["Dates"], y=df["Values3"], mode="lines+markers", name="Line 2"),
+    ],
+    layout_title_text="Timeline",
+    layout_template="ssb_plotly_template",
+)
+
+timeline_chart.show()
+```
+
+Create Plotly Table with ssb-plotly-template.
+
+```
+fig_table = go.Figure(
+    data=[
+        go.Table(
+            header=dict(values=list(df.columns)),
+            cells=dict(values=[df[col].tolist() for col in df.columns]),
+        )
+    ]
+)
+
+fig_table.update_layout(template="ssb_plotly_template", title="Table")
+
+fig_table.show()
+```
+
 
 ## Contributing
 
