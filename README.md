@@ -31,7 +31,7 @@ This is not an official template. The template is still under development.
 
 ## Features
 
-- Custom Plotly layout that can be easily applied to any figure.
+- Custom Plotly Template that can be applied to Poltly figures. 
 - Includes predefined color schemes, fonts, and other styling options.
 - Compatible with Plotly go chart types, including bar, line, scatter, and Plotly tables.
 
@@ -49,12 +49,17 @@ You can install _Plotly template SSB design_ via [pip] from [PyPI]:
 pip install ssb-plotly-template
 ```
 
+Install with Poetry:
+```console
+poetry add ssb-plotly-template
+```
+
 ## Usage
 
-After installing the library, you can easily apply the custom Plotly template to your figures. Here’s how to use it:
+After installing the library, you can apply the Plotly template to your Plotly figures. How to use it: 
 
 1. Import both Plotly and ssb-plotly-template
-2. Create a Plotly figure.  with the ssb-plotly-template template.
+2. Create a Plotly figure with the ssb-plotly-template template.
 
 ### Example
 Import libraries and create data:
