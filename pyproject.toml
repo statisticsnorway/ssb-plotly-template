@@ -16,6 +16,7 @@ Changelog = "https://github.com/statisticsnorway/ssb-plotly-template/releases"
 [tool.poetry.dependencies]
 python = "^3.10"
 click = ">=8.0.1"
+plotly = "^5.24.1"
 
 [tool.poetry.group.dev.dependencies]
 pygments = ">=2.10.0"
@@ -124,3 +125,10 @@ classmethod-decorators = ["classmethod", "validator", "root_validator", "pydanti
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[[tool.mypy.overrides]]
+module = [
+    "plotly.*",
+]
+ignore_missing_imports = true
