@@ -59,7 +59,7 @@ After installing the library, you can easily apply the custom Plotly template to
 ### Example
 Import libraries and create data:
 ```
-import ssb_plotly_template
+import ssb_plotly_template.ssb_plotly_template
 import plotly.graph_objects as go
 import pandas as pd
 
