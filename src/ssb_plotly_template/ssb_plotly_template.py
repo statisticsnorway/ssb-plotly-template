@@ -29,6 +29,7 @@ pio.templates["ssb_plotly_template"] = go.layout.Template(
             "zeroline": False,
             "showline": True,
             "tickmode": "linear",
+            "automargin": True,
         },
         "yaxis": {
             "showgrid": True,
@@ -37,6 +38,7 @@ pio.templates["ssb_plotly_template"] = go.layout.Template(
             "ticks": "outside",
             "zeroline": False,
             "showline": True,
+            "automargin": True,
         },
         "plot_bgcolor": "#FFFFFF",
     },
